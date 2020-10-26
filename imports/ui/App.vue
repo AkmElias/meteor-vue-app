@@ -1,44 +1,36 @@
 <template>
   <div>
     <Students v-bind:students="students" />
+    <Subjects v-bind:subjects="subjects" />
   </div>
 </template>
 
 <script>
-import Students from "./Students.vue";
+    import Students from "./Students.vue";
+    import Subjects from "./Subjects.vue"
+    import {StudentsInDb} from "../api/students"
+    import {SubjectsInDb} from "../api/subjects"
 
-export default {
-  components: {
-    Students,
-  },
-  data() {
-    return {
-      students: [
-        {
-          name: "Elias",
-          email: "elias1@gmail.com",
-          phone: 01879023909,
-          DateOfBirth: "31 Dec 1994",
-          Subject: "English",
+    export default {
+        components: {
+            Students,
+            Subjects,
         },
-        {
-          name: "Elias2",
-          email: "elias1@gmail.com",
-          phone: 01879023909,
-          DateOfBirth: "31 Dec 1994",
-          Subject: "English",
+        data() {
+           return {
+                
+            };
         },
-        {
-          name: "Elias3",
-          email: "elias1@gmail.com",
-          phone: 01879023909,
-          DateOfBirth: "31 Dec 1994",
-          Subject: "English",
-        },
-      ],
+        meteor: {
+           students () {
+             return StudentsInDb.find({}).fetch()
+            },
+           subjects () {
+             return SubjectsInDb.find({}).fetch();
+            },
+        }
     };
-  },
-};
 </script>
 
-<style></style>
+<style>
+</style>
