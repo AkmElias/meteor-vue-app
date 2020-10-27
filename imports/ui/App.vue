@@ -6,8 +6,8 @@
 </template>
 
 <script>
-    import Students from "./Students.vue";
-    import Subjects from "./Subjects.vue"
+    import Students from "./layouts/Students.vue";
+    import Subjects from "./layouts/Subjects.vue"
     import {StudentsInDb} from "../api/students"
     import {SubjectsInDb} from "../api/subjects"
 

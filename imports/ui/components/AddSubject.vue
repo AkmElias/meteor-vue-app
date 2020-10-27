@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import {SubjectsInDb} from '../api/subjects';
+    import {SubjectsInDb} from '../../api/subjects';
     import uuid from 'uuid';
     export default {
         name: "AddSubject",

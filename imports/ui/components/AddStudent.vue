@@ -14,7 +14,7 @@
 </template>
 <script>
 import uuid from 'uuid'
-import {StudentsInDb} from '../api/students'
+import {StudentsInDb} from '../../api/students'
 export default {
     name: "AddStudent",
     data () {

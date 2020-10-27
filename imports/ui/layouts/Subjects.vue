@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import AddSubject from "./AddSubject.vue";
+import AddSubject from "../components/AddSubject.vue";
 
 export default {
     name: "Subjects",

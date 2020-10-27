@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import AddStudent from './AddStudent.vue';
+    import AddStudent from '../components/AddStudent.vue';
 
     export default {
         name: "Students",
